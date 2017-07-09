@@ -1,0 +1,52 @@
+<head>
+  <title>Li_Si</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Clicker+Script|Princess+Sofia|Ruge+Boogie|Ruthie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Athiti|Dosis" rel="stylesheet">
+</head>
+
+<body>
+    
+</body>
+
+<template name="ApplicationLayout">
+    {{> yield "navbar"}}
+    {{> yield "main"}}
+</template>
+
+<template name="landing">
+    <div class="striscia"></div>
+    <div class="container galleria1" id="avviso">
+        <a href="/luoghi"><img alt="ricerca tramite immagini" src="lago_tenno.jpg" class="img-responsive"></a>
+    </div>
+    
+    <div class="container ricerca dimG">
+        <input type="text" placeholder="Benvenuto su Lì Sì (Luoghi Insoliti Sconosciuti Incantevoli)">
+    </div>
+    
+    <div class="container loginForm">
+        {{> loginButtons}}        
+    </div>
+    
+    <div class="container nome">
+        <div class="arrow-up"></div>
+        <h1>LìSì</h1>
+    </div>
+    
+    <div class="riquadro"></div>
+    <div class="container mappa1" id="googleMap">
+    <h1>Ricerca tramite mappa</h1>
+        <script>
+            function myMap() {
+          var myCenter = new google.maps.LatLng(45.939677,10.815886);
+          var mapCanvas = document.getElementById("googleMap");
+          var mapOptions = {center: myCenter, zoom: 8};
+          var map = new google.maps.Map(mapCanvas, mapOptions);
+          var marker = new google.maps.Marker({position:myCenter});
+          marker.setMap(map);
+        }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLayYgU14R9TN48D10TwHdG6eFbCBGp6Y&callback=myMap">
+        </script>
+    </div>
+</template>

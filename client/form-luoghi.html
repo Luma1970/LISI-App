@@ -1,0 +1,24 @@
+<template name="edit">
+    <div class="striscia"></div>
+    <div class="container form">
+        {{> insertPlaceForm}}
+    </div>
+</template>
+
+
+<template name="insertPlaceForm">
+<!-- aggiunto div -->
+    <div id="form_luoghi" class="js-salva-form-luoghi">
+  {{#autoForm collection="Places" id="inserisciLuoghi" type="insert"}}
+    <fieldset>
+      <legend>Aggiungi un luogo</legend>
+      {{> afQuickField name='titolo'}}
+      {{> afQuickField name='luogo'}}
+      {{> afQuickField name='indirizzo' rows=3}}
+      {{> afQuickField name='tipologia'}}
+      {{> starsRating id='rating' mutable=true class="js-rating-place miaStella" data_id=_id rating=ratingh}}
+    </fieldset>
+    <button type="submit" class="insert">Inserisci</button>
+  {{/autoForm}}
+    </div>
+</template>

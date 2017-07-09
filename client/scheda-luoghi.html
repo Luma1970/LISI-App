@@ -1,0 +1,53 @@
+<template name="scheda">
+    <div class="container verdino int">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="tit">{{titolo}} </span>
+            </div>
+            <div class="col-md-4">
+                <p class="ins">Inserito da: <span class="dati">{{submittedBy}}</span> il <span class="dati">{{createdOn}}</span></p>
+            </div>
+            <div class="col-md-4">
+<!--spostate stelline nel form -->
+                <span class="rate">Valutazione: {{rating}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <p>{{luogo}} - {{indirizzo}} -
+                <span class="dati">{{tipologia}}</span></p>
+        </div>
+    </div>
+    
+    <div class="container zeroPadding immagini">
+        <div class="row">
+            <div class="col-xs-12 fotoInt">
+                <img alt="Foto del luogo" src="http://via.placeholder.com/1170x720" class="img-responsive">
+                <span><button type="button" class="myAdd2"><img alt="pulsante aggiunta foto" src="plus.png"/></button></span>
+            </div>
+            <div class="col-md-2 miniatura">
+                <img alt="thumbnail" src="http://via.placeholder.com/170x170">
+            </div>
+            <div class="col-md-2 miniatura">
+                <img alt="thumbnail" src="http://via.placeholder.com/170x170">
+            </div>
+            <div class="col-md-2 miniatura">
+                <img alt="thumbnail" src="http://via.placeholder.com/170x170">
+            </div>
+            <div class="col-md-2 miniatura">
+                <img alt="thumbnail" src="http://via.placeholder.com/170x170">
+            </div>
+            <div class="col-md-2 miniatura">
+                <img alt="thumbnail" src="http://via.placeholder.com/170x170">
+            </div>
+            <div class="col-md-2 miniatura">
+                <img alt="thumbnail" src="http://via.placeholder.com/170x170">
+            </div>
+        </div>
+    </div>
+    
+    <div class="container verdino descr">
+        <h1>Descrizione:</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique tellus sit amet iaculis pellentesque. Cras vulputate sapien in urna aliquet, sit amet dignissim nunc venenatis. Fusce ac diam eget dolor egestas maximus. Duis sit amet hendrerit neque. Nam faucibus erat id tellus dictum bibendum. Quisque a dolor nisl. Phasellus vitae lobortis nisl. Vestibulum lacinia erat id augue aliquet, nec pretium justo malesuada.</p>
+        <span><button type="button" class="btn myAdd3"><img alt="pulsante aggiunta descrizione" src="plus.png"/></button></span>
+    </div>
+</template>
